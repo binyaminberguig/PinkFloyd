@@ -1,11 +1,13 @@
-package PinkFloyd;
+package test.Pinkfloyd;
 
 
 import java.util.ArrayList;
 
 import org.junit.*;
 
-
+import PinkFloyd.Fan;
+import PinkFloyd.Instruments;
+import PinkFloyd.Membre;
 import junit.framework.TestCase;
 
 /**
@@ -32,7 +34,7 @@ import junit.framework.TestCase;
  * qui réalise les engagements, et suivi d'un appel à tearDown(), qui les
  * détruit.
  */
-public class MembresTest extends TestCase
+public class ClassTests extends TestCase
 {
     // Définissez ici les variables d'instance nécessaires à vos engagements;
     // Vous pouvez également les saisir automatiquement du présentoir
@@ -45,6 +47,11 @@ public class MembresTest extends TestCase
     private Membre davidgilmur;
     private Instruments guitare;
     private Instruments piano;
+    
+    private Fan fan1;
+    private Fan fan2;
+    
+    
     /**
      * Constructeur de la classe-test MembresTest
      *
@@ -104,7 +111,17 @@ public class MembresTest extends TestCase
     	ArrayList<Instruments> instruments = new ArrayList<Instruments>();
     	instruments.add(new Instruments("piano"));
     	instruments.add(new Instruments("guitare"));
-        assertEquals(instruments.get(0).getName(), davidgilmur.getInstruments(0).getName());
-        
+        assertEquals(instruments.get(0).getName(), davidgilmur.getInstruments(0).getName()); 
     }
+    
+    @Test
+    public void testFan() {
+    	fan1 = new Fan("Isac" , "0765784939" , "isac.fr201@gmail.com" );
+    	fan2 = new Fan("Elias" , "08954937584" , "elias.pink@hotmail.com");
+    	assertEquals(fan1.getName() , "Isac");
+    	assertEquals(fan1.getPhoneNumber(), "0765784939");
+    	assertTrue(fan1.getMembrePrefere() == null);
+    }
+    
+    
 }

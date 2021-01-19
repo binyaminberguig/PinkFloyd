@@ -9,7 +9,7 @@ import org.junit.*;
 
 import PinkFloyd.*;
 
-public class testAjouter {
+public class FunctionalTestForPinkFoyd {
 	private Membre membre1 = new Membre();
 	private Membre membre2 = new Membre();
 	@Given("la creation d un membre {string}")
