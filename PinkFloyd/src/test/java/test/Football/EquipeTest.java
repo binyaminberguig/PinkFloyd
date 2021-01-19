@@ -1,5 +1,6 @@
-package yo.agile.projetAgile2020;
+package test.Football;
 
+import fansMatches.AdapterJoueur;
 
 import static org.junit.Assert.*;
 
@@ -11,6 +12,7 @@ import org.junit.Test;
 
 import Football.Equipe;
 import Football.Joueur;
+import PinkFloyd.Fan;
 
 /**
  * Classe-test JoueursTest.
@@ -24,13 +26,15 @@ public class EquipeTest
     private Equipe equipe1;
     private Joueur joueurs1;
     private ArrayList<Joueur> mesJoueurs = new ArrayList<Joueur>();
-    
+    private Fan fan1;
+    private Fan fan2;
 
     /**
      * Constructeur de la classe-test JoueursTest
      */
     public EquipeTest()
     {
+    	
     }
 
     /**
@@ -73,6 +77,14 @@ public class EquipeTest
     public void testCouleurMaillot()
     {
         assertEquals("rouge", equipe1.getCouleurMaillot());
+    }
+    
+    @Test
+    public void testFanFootball() {
+    	fan1 = new Fan("Isac" , "0765784939" , "isac.fr201@gmail.com" );
+    	AdapterJoueur fan1joueur = new AdapterJoueur(fan1);
+    	Equipe equipe2 = new Equipe(fan1joueur , "PinkFloyd" , "arcentiel");
+    	assertEquals("Isac", equipe2.getMesJoueurs().get(0).getNom());
     }
 }
 

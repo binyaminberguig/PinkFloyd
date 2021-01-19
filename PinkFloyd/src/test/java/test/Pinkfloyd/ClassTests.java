@@ -123,5 +123,7 @@ public class ClassTests extends TestCase
     	assertTrue(fan1.getMembrePrefere() == null);
     }
     
+  
+    
     
 }

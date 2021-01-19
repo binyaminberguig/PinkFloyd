@@ -1,4 +1,4 @@
-package yo.agile.projetAgile2020;
+package test.Football;
 
 
 import static org.junit.Assert.*;

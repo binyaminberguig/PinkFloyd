@@ -1,9 +1,10 @@
+package fansMatches;
 
 
 import Football.Joueur;
 import PinkFloyd.Fan;
 
-class AdapterJoueur extends Joueur {
+public class AdapterJoueur extends Joueur {
 Fan fan ;
 	public AdapterJoueur(Fan fan) {
 		super();

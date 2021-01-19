@@ -1,4 +1,4 @@
-package yo.agile.projetAgile2020;
+package test.Football;
 
 import cucumber.api.java.en.Given;  
 import cucumber.api.java.en.Then;  
